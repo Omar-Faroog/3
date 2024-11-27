@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الثاني: العمليات الأساسية في بايثون</title>
+    <style>
+        /* إعدادات أساسية */
+        body {
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3e8e41; /* اللون الأخضر الفاتح */
+            color: #fff; /* النص بلون أبيض */
+            line-height: 1.8;
+            transition: background-color 5s ease-in-out; /* تأثير الانتقال بين الألوان */
+        }
+
+        /* التأثيرات الانتقالية للألوان */
+        @keyframes changeBackgroundColor {
+            0% { background-color: #58CC02; }
+            50% { background-color: #87CEEB; }
+            100% { background-color: #58CC02; }
+        }
+
+        body {
+            animation: changeBackgroundColor 60s infinite;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* تصميم المحتوى */
+        .content {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #FFD700; /* اللون الذهبي لتمييز العناوين */
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        /* التأثيرات على النصوص */
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #2e2e2e; /* خلفية سوداء */
+            color: #fff; /* النص بلون أبيض */
+            padding: 10px;
+            font-size: 22px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: block;
+            word-wrap: break-word; /* تجنب الكسر عند الحروف الطويلة */
+        }
+
+        /* الشرح أسفل النص */
+        .explanation {
+            font-size: 18px;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        /* تصميم تحدي الدرس */
+.challenge {
+    background-color: #f8f9fa; /* خلفية بلون فاتح */
+    color: #2c3e50; /* نص بلون غامق */
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 600; /* جعل الخط ثقيل قليلاً */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظلال خفيفة */
+    transition: all 0.9s ease; /* تأثير انتقال عند التفاعل */
+}
+
+.challenge:hover {
+    background-color: #000; /* تغيير الخلفية عند التمرير */
+    transform: scale(1.05); /* تكبير العنصر عند التمرير */
+}
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>الدرس الثاني: العمليات الأساسية في بايثون</h1>
+</header>
+
+<div class="content">
+    <div class="section">
+        <h2>1. العمليات الحسابية في بايثون</h2>
+        <p>في بايثون، يمكنك إجراء العمليات الحسابية بسهولة باستخدام الرموز الخاصة بكل عملية. إليك بعض العمليات الحسابية الأساسية:</p>
+        
+        <h3>الجمع (+):</h3>
+        <div class="code">
+            result = 5 + 3<br>
+            print(result)  <!-- النتيجة: 8 -->
+        </div>
+        <div class="explanation">
+            العمليات الحسابية مثل الجمع هي أساس كل شيء في البرمجة، فكل تطبيق أو لعبة يتطلب التعامل مع الأرقام، سواء في حسابات النقاط أو العمليات الرياضية داخل اللعبة.
+        </div>
+
+        <h3>الطرح (-):</h3>
+        <div class="code">
+            result = 10 - 4<br>
+            print(result)  <!-- النتيجة: 6 -->
+        </div>
+        <div class="explanation">
+            الطرح يستخدم أيضًا في العديد من التطبيقات مثل الألعاب التي تحتاج إلى حساب الفرق بين النقاط أو الزمن.
+        </div>
+
+        <h3>الضرب (*):</h3>
+        <div class="code">
+            result = 7 * 6<br>
+            print(result)  <!-- النتيجة: 42 -->
+        </div>
+        <div class="explanation">
+            عملية الضرب مهمة عند بناء الألعاب التي تحتوي على مستويات أو في حسابات مثل السرعة والوقت.
+        </div>
+
+        <h3>القسمة (/):</h3>
+        <div class="code">
+            result = 15 / 3<br>
+            print(result)  <!-- النتيجة: 5.0 -->
+        </div>
+        <div class="explanation">
+            القسمة تستخدم كثيرًا عندما تحتاج إلى توزيع الموارد أو تقسيم الأشياء على عدة أجزاء.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. العمليات الرياضية المتقدمة</h2>
+        <p>بالإضافة إلى العمليات الأساسية، يمكن لبايثون إجراء عمليات رياضية متقدمة مثل:</p>
+        
+        <h3>الأس (^):</h3>
+        <div class="code">
+            result = 2 ** 3  <!-- 2 مرفوعة للقوة 3 --> <br>
+            print(result)  <!-- النتيجة: 8 -->
+        </div>
+        <div class="explanation">
+            العمليات المتقدمة مثل الأس مهمة في تطبيقات معينة مثل الألعاب الثلاثية الأبعاد أو في الحسابات المالية المعقدة.
+        </div>
+
+        <h3>القسمة بدون باقي (//):</h3>
+        <div class="code">
+            result = 10 // 3<br>
+            print(result)  <!-- النتيجة: 3 -->
+        </div>
+        <div class="explanation">
+            هذه العملية مفيدة جدًا عندما تحتاج إلى الحصول على عدد صحيح فقط من قسمة الأرقام.
+        </div>
+
+        <h3>الباقي من القسمة (%):</h3>
+        <div class="code">
+            result = 10 % 3<br>
+            print(result)  <!-- النتيجة: 1 -->
+        </div>
+        <div class="explanation">
+            معرفة الباقي من القسمة يُستخدم في الكثير من تطبيقات الألعاب لإجراء التكرار الدوري أو تقسيم الأشياء بطريقة معينة.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. استخدام المتغيرات والنصوص</h2>
+        <p>في هذا الجزء، سنتعلم كيفية استخدام المتغيرات لإجراء العمليات الحسابية ودمج النصوص وتكرارها.</p>
+
+        <h3>استخدام المتغيرات في العمليات الحسابية:</h3>
+        <div class="code">
+            a = 10<br>
+            b = 5<br>
+            result = a + b<br>
+            print(result)  <!-- النتيجة: 15 -->
+        </div>
+        <div class="explanation">
+            استخدام المتغيرات يجعل الكود أكثر تنظيمًا وسهولة في التعديل. هذا شائع في البرامج التي تتطلب جمع البيانات أو تحديثها مثل تطبيقات الفواتير.
+        </div>
+
+        <h3>دمج النصوص (Concatenation):</h3>
+        <div class="code">
+            first_name = "Omar"<br>
+            last_name = "Qaid"<br>
+            full_name = first_name + " " + last_name<br>
+            print(full_name)  <!-- النتيجة: Omar Qaid -->
+        </div>
+        <div class="explanation">
+            دمج النصوص يُستخدم بكثرة في تطبيقات الويب والتطبيقات التفاعلية لإنشاء رسائل مخصصة أو عرض أسماء المستخدمين بشكل أنيق.
+        </div>
+
+        <h3>تكرار النصوص:</h3>
+        <div class="code">
+            text = "Hello! "<br>
+            result = text * 3<br>
+            print(result)  <!-- النتيجة: Hello! Hello! Hello! -->
+        </div>
+        <div class="explanation">
+            تكرار النصوص مفيد في تصميم الرسائل أو المؤثرات النصية، مثل إنشاء حدود مرئية أو تنسيقات نصوص متكررة.
+        </div>
+
+        <h3>إدخال الأرقام من المستخدم:</h3>
+        <div class="code">
+            number1 = int(input("Enter the first number: "))<br>
+            number2 = int(input("Enter the second number: "))<br>
+            result = number1 + number2<br>
+            print("The sum is:", result)
+        </div>
+        <div class="explanation">
+        <h1>☛</h1>
+           إدخال الأرقام من المستخدم يُعد من أهم أساسيات بناء البرامج التفاعلية، مثل الآلات الحاسبة أو التطبيقات المالية.
+        </div>
+    </div>
+
+    <div class="challenge">
+        <h2>تحدي الدرس الثاني:</h2>
+        <p>حاول كتابة برنامج يطلب من المستخدم إدخال رقمين، ثم يقوم بحساب حاصل ضربهما وجمعهما وإظهار النتائج.</p>
+    </div>
+</div>
+
+</body>
+</html>
